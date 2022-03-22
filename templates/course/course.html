@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{%load static %}
+
+<html>
+    <head>
+        <title>GA Courses</title>
+        <link rel="stylesheet" href="{% static 'css/course.css' %}">
+    </head>
+
+    <body>
+        <img src="{% static 'images/UofG.jpg' %}" alt="University of Glasgow Logo">
+        <div class="header">
+                <h1>University of Glasgow GA program</h1>
+
+                <p1>The list of courses provided by the GA program:</p1>
+        </div>
+
+        <div class="main">
+            {% if courses %}
+                    {% for course in courses %}
+                    <h2>{{ course.name }}</h2>
+                    <p1>Starting date: {{ course.start_date }}</p1><br><br>
+                    <p1>{{ course.description }}</p1><br>
+
+                    {% endfor %}
+            {% else %}
+                <strong>There are no courses present.</strong>
+            {% endif %}
+        </div>
+        <br>
+        <div class="footer">
+            <br>
+            <a href="/about/">About the course</a><br><br>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+.header {
+    background-color: orange;
+    height:180px
+}
+
+.main {
+    background-color: lightblue;
+}
+
+.footer {
+    background-color: orange;
+}
+
+img {
+    float: right
+}
